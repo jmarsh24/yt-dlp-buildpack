@@ -1,0 +1,14 @@
+#!/bin/sh
+
+BUILD_DIR=$1
+CACHE_DIR=$2
+
+echo "-----> Installing yt-dlp"
+
+# Download the latest yt-dlp release
+curl -sL https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o $BUILD_DIR/bin/yt-dlp
+
+# Make it executable
+chmod +x $BUILD_DIR/bin/yt-dlp
+
+echo "-----> yt-dlp installation completed"
